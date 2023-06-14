@@ -11,8 +11,9 @@ def test_greeting():
     output = f"Привет, {name}! Тебе {age} лет."
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
+    print(output)
 
-
+test_greeting()
 def test_rectangle():
     """
     Напишите программу, которая берет длину и ширину прямоугольника
@@ -24,11 +25,13 @@ def test_rectangle():
     # TODO сосчитайте периметр
     perimeter = (a + b) * 2
     assert perimeter == 60
+    print(perimeter)
 
     # TODO сосчитайте площадь
     area = a * b
     assert area == 200
-
+    print(area)
+test_rectangle()
 
 def test_circle():
     """
@@ -38,13 +41,15 @@ def test_circle():
     r = 23
     # TODO сосчитайте площадь
     area = math.pi * r ** 2
+    print(area)
     assert area == 1661.9025137490005
 
     # TODO сосчитайте длину окружности
     length = 2 * math.pi * r
     assert length == 144.51326206513048
+    print(length)
 
-
+test_circle()
 def test_random_list():
     """
     Создайте список из 10 случайных чисел от 1 до 100 и отсортируйте его по возрастанию.
@@ -55,7 +60,8 @@ def test_random_list():
     l = sorted(random.sample(range(1, 100), 10))
     assert len(l) == 10
     assert l[0] < l[-1]
-
+    print(l)
+test_random_list()
 
 def test_unique_elements():
     """
@@ -64,13 +70,14 @@ def test_unique_elements():
     l = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 10]
     # TODO удалите повторяющиеся элементы
 
-    list = list(set(l))
+    l = list(set(l))
 
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(l, list)
 
-
+test_unique_elements()
 def test_dicts():
     """
     Создайте словарь из двух списков.
@@ -81,8 +88,10 @@ def test_dicts():
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
     # TODO создайте словарь
-    d = {}
-    d = list(zip(first, second))
+    d = dict(zip(first, second))
+    print(d.values())
 
     assert isinstance(d, dict)
     assert len(d) == 5
+
+test_dicts()
