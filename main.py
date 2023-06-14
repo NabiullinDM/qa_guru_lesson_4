@@ -47,15 +47,13 @@ test_rectangle()
 
 def test_random_list():
     #Создайте список из 10 случайных чисел от 1 до 100 и отсортируйте его по возрастанию.
-    list_new = []
 
-    for a in range(10):
-        namber = random.randint(1,100)
-        list_new.append(namber)
-    list_new.sort()
-    print(list_new)
-    assert list_new == [6, 7, 18, 32, 41, 43, 45, 46, 51, 82]
-    assert list_new[1] < list_new[0]
+    random_list = sorted(random.sample(range(1, 100), 10))
+
+    print(random_list)
+
+    assert len(random_list) == 10
+    assert random_list[0] < random_list[-1]
 
 test_random_list()
 
