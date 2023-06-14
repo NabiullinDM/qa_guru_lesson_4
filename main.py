@@ -30,7 +30,7 @@ def test_rectangle():
     # TODO сосчитайте площадь
     area = a * b
     assert area == 200
-    print(area)
+
 test_rectangle()
 
 def test_circle():
@@ -60,7 +60,7 @@ def test_random_list():
     l = sorted(random.sample(range(1, 100), 10))
     assert len(l) == 10
     assert l[0] < l[-1]
-    print(l)
+
 test_random_list()
 
 def test_unique_elements():
@@ -75,7 +75,7 @@ def test_unique_elements():
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    print(l, list)
+    print(l)
 
 test_unique_elements()
 def test_dicts():
