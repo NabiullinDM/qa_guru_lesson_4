@@ -12,7 +12,7 @@ def test_greetings():
 
     text = f"Привет, меня зовут {name}. Мне {age} лет."
     print(text)
-
+    assert text == "Привет, меня зовут Дамир. Мне 37 лет."
 
 test_greetings()
 
@@ -23,8 +23,9 @@ def test_test_rectangle():
     width = 15
     perimetr = (length + width) * 2
     area = length * width
-
-    print (f"периметр: {perimetr}, площадь: {width}")
+    text = f"периметр: {perimetr}, площадь: {width}"
+    print (text)
+    assert text == "периметр: 56, площадь: 15"
 
 test_test_rectangle()
 
@@ -38,6 +39,8 @@ def test_rectangle():
     perimetr = 2 * math.pi * radius
 
     text = f"Периметр: {perimetr}, площадь окружности: {area}"
+    assert text == "Периметр: 131.94689145077132, площадь окружности: 1385.4423602330987"
+
     print(text)
 
 test_rectangle()
@@ -51,6 +54,8 @@ def test_random_list():
         list_new.append(namber)
     list_new.sort()
     print(list_new)
+    assert list_new == [6, 7, 18, 32, 41, 43, 45, 46, 51, 82]
+    assert list_new[1] < list_new[0]
 
 test_random_list()
 
@@ -60,7 +65,7 @@ def test_unique_elements():
     spisok = [42, 3, 4, 4, 4, 2, 55, 44, 23, 12]
     spisok2 = list(set(spisok))
     print(spisok2)
-
+    assert spisok2 == [2, 3, 4, 42, 44, 12, 23, 55]
 test_unique_elements()
 
 def test_dicts():
@@ -70,5 +75,5 @@ def test_dicts():
     sp2 = ['a', 's', 'd', 'b']
     sp12 = list(zip(sp1, sp2))
     print(sp12)
-
+    assert sp12 ==[(3, 'a'), (4, 's'), (5, 'd'), (6, 'b')]
 test_dicts()
